@@ -80,11 +80,11 @@ app.layout = html.Div(children=[
     State(component_id='SingleFam', component_property='value'),
 
 )
-def ames_lr_function(clicks, YearBuilt,Bathrooms,BedroomAbvGr,TotalSF,SingleFam,LargeNeighborhood):
+def ames_lr_function(clicks, YearBuilt, YearSold, Bathrooms,BedroomAbvGr,TotalSF,SingleFam):
     if clicks==0:
         return "waiting for inputs"
     else:
-        y = [-37249.2825 + 703.728*YearBuilt + -658.3489*YrSold + 12785.5527*Bathrooms + -7847.5222*BedroomAbvGr+ 49.802*TotalSF+ 25391.3338*SingleFam ]
+        y = [-37249.2825 + 703.728*YearBuilt + -658.3489*YearSold + 12785.5527*Bathrooms + -7847.5222*BedroomAbvGr+ 49.802*TotalSF+ 25391.3338*SingleFam ]
         formatted_y = "${:,.2f}".format(y[0])
         return formatted_y
 
